@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Path Traversal in Axway File Transfer Direct"
+title:  "Directory Traversal in Axway File Transfer Direct"
 date:   2019-01-20 19:51:02 +0700 
 categories: [cve]
 ---
