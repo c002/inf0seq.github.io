@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title:  "SQL Injection in OPTOSS Next Gen Network Management System (NG-NetMS)"
+title:  "Cross-site scripting (XSS) in OPTOSS Next Gen Network Management System (NG-NetMS)"
 date:   2019-01-20 19:51:02 +0700 
 categories: [cve]
 ---
