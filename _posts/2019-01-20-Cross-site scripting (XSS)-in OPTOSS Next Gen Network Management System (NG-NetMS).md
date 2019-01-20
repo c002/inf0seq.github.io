@@ -53,6 +53,6 @@ Accept: */*
 {% endhighlight %}
 
 #### References
-1. https://www.owasp.org/index.php/SQL_Injection
+1. https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
 2. https://opt-net.eu/products/optoss-ng-netms
 3. https://sourceforge.net/projects/ngnms/
