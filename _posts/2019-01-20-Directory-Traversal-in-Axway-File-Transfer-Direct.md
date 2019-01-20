@@ -5,6 +5,9 @@ date:   2019-01-20 19:51:02 +0700
 categories: [cve]
 ---
 
+* CVE ID: CVE-2019-....
+* CWE ID: CWE-259
+
 Vendor: Axway
 
 Product: Axway File Transfer Direct
