@@ -6,7 +6,9 @@ categories: [cve]
 ---
 
 Vendor: OPT/NET BV
+
 Product: OPTOSS Next Gen Network Management System (NG-NetMS)
+
 Version affected: NG-NetMS v3.6-2 and earlier versions
 
 #### Product description:
