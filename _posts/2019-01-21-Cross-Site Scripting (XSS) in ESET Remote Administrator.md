@@ -2,8 +2,9 @@
 layout: post
 title:  "Cross-Site Scripting (XSS) in ESET Remote Administrator"
 date:   2019-01-21 03:43:45 +0700
-categories: [cves]
+categories: [cve]
 ---
+I found that XSS vulnerabilities during the pentest back in 2016, but never reported it to the vendor. According to exloit-db.com/search or cxsecurity.com/search this has never been reported, so I'm catching up now in 2019 with old stuff.
 
 Vendor: ESET, LLC, d/b/a ESET North America
 Product: ESET Remote Administrator
