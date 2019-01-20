@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "get Month Name [CF]"
-date:   2016-06-11 03:43:45 +0700
-categories: [python, codefights]
+title:  "Cross-Site Scripting (XSS) in ESET Remote Administrator"
+date:   2019-01-21 03:43:45 +0700
+categories: [cves]
 ---
 
 Map the given integer to a month.
