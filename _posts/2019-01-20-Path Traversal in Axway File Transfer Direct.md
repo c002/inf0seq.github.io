@@ -1,9 +1,14 @@
-
-
-
+---
+layout: post
+title:  "Path Traversal in Axway File Transfer Direct"
+date:   2019-01-20 19:51:02 +0700 
+categories: [cve]
+---
 
 Vendor: Axway
+
 Product: Axway File Transfer Direct
+
 Version affected:  2.7.1
 
 Axway is a software and services company registered in France with headquarters in Phoenix, Arizona. Established in 2001, Axway serves more than 11,000 organisations in 100 countries, with offices around the globe. Their award-winning products, solutions and services enable the business-critical transactions required to accelerate performance within and among enterprises - while providing management, security and governance on interactions throughout business networks.
@@ -12,7 +17,7 @@ Axway is a software and services company registered in France with headquarters 
 
 File Transfer Direct is an ad hoc file exchange solution that brings enterprise-class managed file transfer (MFT) capabilities to familiar email interfaces and web-based clients. File Transfer Direct transparently applies administrator-defined policies while adding the security and audit capabilities required for corporate governance and regulatory compliance.
 
-#### Finding: Directory traversal
+#### Finding:
 
 The unauthenticated Directory Traversal vulnerability can be exploited by issuing a specially crafted HTTP GET request utilizing a simple bypass, %2e%2e instead of (/),URL encoding.
 
@@ -77,7 +82,7 @@ stunnel:x:20009:20011:user stunnel:/dev/null:/bin/false
 _lldpd:x:103:501::/home/_lldpd:/bin/bash
 {% endhighlight %}
 
-#### References
+#### References:
 1. https://www.owasp.org/index.php/Path_Traversal
 2. https://www.axway.com/
 3. Axway File Transfer Direct - http://infosightsol.com/wordpress/wp-content/uploads/2012/11/Axway_Datasheet_File_Transfer_Direct_EN.pdf
