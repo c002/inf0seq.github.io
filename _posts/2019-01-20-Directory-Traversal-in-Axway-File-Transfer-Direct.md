@@ -23,6 +23,7 @@ The unauthenticated Directory Traversal vulnerability can be exploited by issuin
 
 Example:
 {% highlight ruby %}
+
 REQUEST
 ========
 
@@ -36,6 +37,7 @@ Connection: close
 {% endhighlight %}
 
 {% highlight ruby %}
+
 RESPONSE
 ========
 HTTP/1.1 200 OK
