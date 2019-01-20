@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "Cross-site scripting (XSS) in OPTOSS Next Gen Network Management System (NG-NetMS)"
