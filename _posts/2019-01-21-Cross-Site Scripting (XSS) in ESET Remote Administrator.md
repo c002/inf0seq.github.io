@@ -14,8 +14,8 @@ ESET Remote Administrator allows to oversee the entire network, including workst
 communication with agents, and collects and stores application data in the database.
 
 #### Cross-Site Scripting, Reflected
-CVE: CVE-2019-xxxx
-CWE: CWE-200
+* CVE: CVE-2019-xxxx
+* CWE: CWE-79
 
 
 A Cross Site Scripting vulnerability exists in ESET Remote Administrator hl, hp parameters. It is possible to inject arbitrary JavaScript into requests which are ultimately executed by the user browser.
