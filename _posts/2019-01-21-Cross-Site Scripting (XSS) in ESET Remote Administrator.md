@@ -5,6 +5,8 @@ date:   2019-01-21 03:43:45 +0700
 categories: [cve]
 ---
 I found that XSS vulnerabilities during the pentest back in 2016, but never reported it to the vendor. According to exloit-db.com/search or cxsecurity.com/search this has never been reported, so I'm catching up now in 2019 with old stuff.
+cvedetails.com websites doesn't mention it https://www.cvedetails.com/vulnerability-list/vendor_id-8861/product_id-16877/Eset-Remote-Administrator.html. It appears, that issue might have been internally patched.
+Mitre website also mentioned only one XSS back from 2009, see https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=Eset+Remote+Administrator
 
 Vendor: ESET, LLC, d/b/a ESET North America
 Product: ESET Remote Administrator
