@@ -1,6 +1,6 @@
 ---
 layout: posts_by_category
-categories: CVE
+categories: cve
 title: CVE
-permalink: /category/CVE
+permalink: /category/cve
 ---
