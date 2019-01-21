@@ -61,5 +61,5 @@ Cookie: JSESSIONID=02EB9FB09F74291DF91AE98411F9ECAF
 
 #### References:
 1. OWASP - https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
-2. https://www.eset.com/au/business/remote-management/remote-administrator/
+2. Vendor website - https://www.eset.com/au/business/remote-management/remote-administrator/
 3. Download the latest trial version - https://support.eset.com/kb6114/?locale=en_US&viewlocale=en_US
