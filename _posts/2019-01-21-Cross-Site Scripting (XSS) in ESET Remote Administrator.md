@@ -8,6 +8,8 @@ I found that XSS vulnerabilities during the pentest back in 2016, but never repo
 cvedetails.com websites doesn't mention it https://www.cvedetails.com/vulnerability-list/vendor_id-8861/product_id-16877/Eset-Remote-Administrator.html. It appears, that issue might have been internally patched.
 Mitre website also mentioned only one XSS back from 2009, see https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=Eset+Remote+Administrator
 
+Unfortunatelly, all evidences except a single txt file went gone during the issue with my MS Windows testing vmware image a year or more ago, where I installed a local version of "All-In-One ERA 6".
+
 Vendor: ESET, LLC, d/b/a ESET North America
 Product: ESET Remote Administrator
 Version affected: 6
