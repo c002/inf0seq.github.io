@@ -5,7 +5,7 @@ date:   2019-01-20 19:51:02 +0700
 categories: [cve]
 ---
 
-* CVE ID: CVE-2019-xxxx
+* CVE ID: CVE-2019-6500
 * CWE ID: CWE-259
 
 Vendor: Axway
