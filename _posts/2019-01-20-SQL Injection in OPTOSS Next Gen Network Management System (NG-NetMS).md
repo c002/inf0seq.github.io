@@ -16,7 +16,7 @@ Opt/Net develops Next Gen Network Management System (NG-NetMS). This is a new we
 
 This product provides near real-time visibility of the networks and ITC infrastructures and interconnected computing resources.
 
-* CVE ID: CVE-2019-xxxx
+* CVE ID: CVE-2019-1000023
 * CWE ID: CWE-89
 
 #### #Proof of Concept
