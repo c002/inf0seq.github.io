@@ -10,7 +10,7 @@ categories: [cve]
 
 Vendor: Axway
 
-Product: Axway File Transfer Direct
+Product: Axway File Transfer Direct, (The product is discontinued. Use the lastest version of this product.)
 
 Version affected:  2.7.1
 
