@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-I am pentester, OSCP. Currently doing more in mobile security, focused on redteaming ...and CREST CCT.
+I am pentester n00b, currently doing more in mobile security, focused on redteaming.
 
 email: inf0seq[at]pm.me
