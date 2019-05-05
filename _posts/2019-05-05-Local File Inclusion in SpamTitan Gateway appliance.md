@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "Local File Inclusion in SpamTitan Gateway appliance"
