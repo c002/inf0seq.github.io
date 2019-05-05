@@ -3,7 +3,7 @@
 layout: post
 title:  "Local File Inclusion in SpamTitan Gateway appliance"
 date:   2019-05-05 19:51:02 +0700 
-categories: [cve, pentest]
+categories: [cve]
 ---
 
 Vulnerability: Local File Inclusion
