@@ -16,11 +16,11 @@ Version affected: SpamTitan v6, which was the latest available version as of 05/
 
 #### Product description:
 
-SpamTitan is a full-service email security solution which protects your business, your employees and your clients.
+"SpamTitan is a full-service email security solution which protects your business, your employees and your clients.
 The solution is extraordinarily simple to set up and manage and provides among its many features 99.97% spam detection,
 virus and malware blocking, authentication control, outbound scanning as well as robust reporting structures.
 Central to everything we do is our service commitment to our worldwide client base, start our free trial today and see why so many
-global brands trust us with their business. 
+global brands trust us with their business." as per statement on TitanHQ Spamtitan website. 
 
 * CVE ID: CVE-2019-
 * CWE ID: CWE-98
@@ -30,11 +30,11 @@ global brands trust us with their business.
 A local file inclusion vulnerability exists in SpamTitan. 
 The vulnerability is due to improper sanitization of the request URI. A remote, authenticated attacker could exploit this vulnerability by sending a crafted request to the target server.Successful exploitation could lead to information disclosure. 
 
-Logs, like maillog.1.bz2, cfma.log.1.bz2 or messages.1.bz2 can be downloaded on log.php site, ie. http://IP/logs.php. via vulnerable parameter jaction, for example: jaction=download+%2Fvar%2Flog%2Fcfma.log.1.
+Logs, like maillog.1.bz2, cfma.log.1.bz2 or messages.1.bz2 can be downloaded on log.php site, ie. http://IP/logs.php. via parameter jaction, for example: jaction=download+%2Fvar%2Flog%2Fcfma.log.1.
 
 ![Configuration of Teradata Viewpoint](/static/img/06/03.png)
 
-#### Legitimate request:
+#### Legitimate HTTP POST request to download log file:
 {% highlight ruby %}
 POST /logs.php HTTP/1.1
 Host: 10.0.0.120
