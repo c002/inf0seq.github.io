@@ -162,10 +162,33 @@ stadmin:*:2004:2004:Administrator:/home/admin:/bin/sh
 cbpolicyd:*:2005:2005:Cluebringer Policyd2:/nonexistant:/sbin/nologin
 {% endhighlight %}
 
+An attacker might read local files with this vulnerability. User tainted data is used when creating the file name that will be opened and read, 
+thus allowing an attacker to read source code and other arbitrary files on the webserver that might lead to new attack vectors. 
+The attacker can detect new vulnerabilities in source code files or read user credentials.
+
+{% highlight ruby %}
+    148: readfile readfile($filename); 
+        139: $filename = '/dev/null';  // if(preg_match('/' . $engine . '/', $filename)) else , 
+        136: $filename = '/var/log/' . $filename;  // if(preg_match('/' . $engine . '/', $filename)),
+            133: $filename = str_replace(' ', '', $filename); 
+                132: $filename = (stripslashes(trim($_POST['logfile'], './ ' . "\t\n")) : 'none'); 
+
+        requires:
+            89: switch($jaction)
+            131:  case 'download' : 
+{% endhighlight %}
+
 
 Sensitive file detection automated with Intruder option of Burpsuite proxy, where i used simple list of files, https://raw.githubusercontent.com/fuzzdb-project/fuzzdb/master/attack/lfi/JHADDIX_LFI.txt 
 
 ![Configuration of Teradata Viewpoint](/static/img/06/02.png)
+
+#### Solution
+{% highlight ruby %}
+Build a whitelist for positive file names. Do not only limit the file name to specific paths or extensions.
+
+1: $files  =  array("index.php",  "main.php");  if(!in_array($_GET["file"],  $files)) exit ; 
+{% endhighlight %}
 
 #### References
 1. https://www.owasp.org/index.php/Testing_for_Local_File_Inclusion
