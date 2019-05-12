@@ -31,7 +31,7 @@ The vulnerability is due to improper sanitization of the request URI. A remote, 
 
 Logs, like maillog.1.bz2, cfma.log.1.bz2 or messages.1.bz2 can be downloaded on log.php site, ie. http://IP/logs.php. via parameter jaction, for example: jaction=download+%2Fvar%2Flog%2Fcfma.log.1.
 
-![Configuration of Teradata Viewpoint](/static/img/06/03.png)
+![Raw HTTP Request/Response ](/static/img/06/03.png)
 
 #### Legitimate HTTP POST request to download log file:
 {% highlight ruby %}
@@ -181,7 +181,7 @@ The attacker can detect new vulnerabilities in source code files or read user cr
 
 Sensitive file detection automated with Intruder option of Burpsuite proxy, where i used simple list of files, https://raw.githubusercontent.com/fuzzdb-project/fuzzdb/master/attack/lfi/JHADDIX_LFI.txt 
 
-![Configuration of Teradata Viewpoint](/static/img/06/02.png)
+![File enumeration with burpsuite proxy](/static/img/06/02.png)
 
 #### Solution
 {% highlight ruby %}
